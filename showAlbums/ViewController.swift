@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       let api = APIManager()
+        api.loadData("https://jsonplaceholder.typicode.com/albums",completion:didloadData)
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    func didloadData(albums:[Album])
+    {
+        
     }
 
     override func didReceiveMemoryWarning() {
