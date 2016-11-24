@@ -35,7 +35,7 @@ class Album
         }
         // get Album ID
         if let  id = data["id"] as? String {
-            self._Id = name
+            self._Id = id
         }
         else
         {

@@ -17,6 +17,7 @@
 		0E8BF46A1DE74398007C19DC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BF4691DE74398007C19DC /* APIManager.swift */; };
 		0E8BF46C1DE743AD007C19DC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BF46B1DE743AD007C19DC /* Album.swift */; };
 		0E8BF46E1DE743D6007C19DC /* AlbumPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BF46D1DE743D6007C19DC /* AlbumPhotos.swift */; };
+		0E8BF4711DE78577007C19DC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BF4701DE78577007C19DC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		0E8BF4691DE74398007C19DC /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		0E8BF46B1DE743AD007C19DC /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		0E8BF46D1DE743D6007C19DC /* AlbumPhotos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotos.swift; sourceTree = "<group>"; };
+		0E8BF4701DE78577007C19DC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		0E8BF4361DE741A8007C19DC /* showAlbums */ = {
 			isa = PBXGroup;
 			children = (
+				0E8BF46F1DE7855F007C19DC /* utils */,
 				0E8BF4681DE7435B007C19DC /* Supporting Files */,
 				0E8BF4671DE7431C007C19DC /* Controller */,
 				0E8BF4661DE74315007C19DC /* Model */,
@@ -164,6 +167,14 @@
 				0E8BF4431DE741A9007C19DC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E8BF46F1DE7855F007C19DC /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				0E8BF4701DE78577007C19DC /* Constants.swift */,
+			);
+			name = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 				0E8BF4381DE741A8007C19DC /* AppDelegate.swift in Sources */,
 				0E8BF46E1DE743D6007C19DC /* AlbumPhotos.swift in Sources */,
 				0E8BF46C1DE743AD007C19DC /* Album.swift in Sources */,
+				0E8BF4711DE78577007C19DC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

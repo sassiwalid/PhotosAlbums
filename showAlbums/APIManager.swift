@@ -35,14 +35,15 @@ class APIManager
                     {
                         var albums = [Album]()
                         for entry in json{
-                            let entry = Stations(data:entry as! JSONDictionnary)
-                            stations.append(entry)
+                            let entry = Album(data:entry as! JSONDictionnary)
+                            albums.append(entry)
                         }
                         let priority = DISPATCH_QUEUE_PRIORITY_HIGH
                         dispatch_async(dispatch_get_global_queue(priority,0))
                         {
                             dispatch_async(dispatch_get_main_queue())
                             {
+                                // if success return the albums
                                 completion(result:albums)
                             }
                         }
