@@ -14,6 +14,7 @@ class Photo
     private var _Title : String
     private var _url : String
     private var _thumbailUrl : String
+    var vImageData:NSData?
     // getters
     var userID:String{
         return _albumId

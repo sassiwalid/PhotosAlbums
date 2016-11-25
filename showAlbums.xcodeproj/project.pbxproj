@@ -19,6 +19,7 @@
 		0E8BF46C1DE743AD007C19DC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BF46B1DE743AD007C19DC /* Album.swift */; };
 		0E8BF46E1DE743D6007C19DC /* AlbumPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BF46D1DE743D6007C19DC /* AlbumPhotos.swift */; };
 		0E8BF4711DE78577007C19DC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BF4701DE78577007C19DC /* Constants.swift */; };
+		0EA0EAEC1DE8AAA800AAE758 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0EAEB1DE8AAA800AAE758 /* CustomCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0E8BF46B1DE743AD007C19DC /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		0E8BF46D1DE743D6007C19DC /* AlbumPhotos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotos.swift; sourceTree = "<group>"; };
 		0E8BF4701DE78577007C19DC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0EA0EAEB1DE8AAA800AAE758 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			children = (
 				0E8BF4391DE741A8007C19DC /* ViewController.swift */,
 				0E8BF46D1DE743D6007C19DC /* AlbumPhotos.swift */,
+				0EA0EAEB1DE8AAA800AAE758 /* CustomCollectionViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				0E0357FE1DE855A200FC6865 /* Photo.swift in Sources */,
 				0E8BF46A1DE74398007C19DC /* APIManager.swift in Sources */,
 				0E8BF43A1DE741A8007C19DC /* ViewController.swift in Sources */,
+				0EA0EAEC1DE8AAA800AAE758 /* CustomCollectionViewCell.swift in Sources */,
 				0E8BF4381DE741A8007C19DC /* AppDelegate.swift in Sources */,
 				0E8BF46E1DE743D6007C19DC /* AlbumPhotos.swift in Sources */,
 				0E8BF46C1DE743AD007C19DC /* Album.swift in Sources */,

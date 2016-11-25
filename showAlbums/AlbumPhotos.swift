@@ -44,13 +44,12 @@ class AlbumPhotos: UICollectionViewController {
         
     }
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.imageArray.count
+        return myphotos.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)
-        let imageView = cell.viewWithTag(1)as! UIImageView
-        imageView.image = imageArray[indexPath.row]
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! CustomCollectionViewCell
+        cell.photo = myphotos[indexPath.row]
         return cell
     }
 
