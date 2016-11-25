@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0357FE1DE855A200FC6865 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0357FD1DE855A200FC6865 /* Photo.swift */; };
 		0E8BF4381DE741A8007C19DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BF4371DE741A8007C19DC /* AppDelegate.swift */; };
 		0E8BF43A1DE741A8007C19DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BF4391DE741A8007C19DC /* ViewController.swift */; };
 		0E8BF43D1DE741A9007C19DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E8BF43B1DE741A9007C19DC /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E0357FD1DE855A200FC6865 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0E8BF4341DE741A8007C19DC /* showAlbums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = showAlbums.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8BF4371DE741A8007C19DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E8BF4391DE741A8007C19DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				0E8BF4691DE74398007C19DC /* APIManager.swift */,
 				0E8BF46B1DE743AD007C19DC /* Album.swift */,
+				0E0357FD1DE855A200FC6865 /* Photo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0357FE1DE855A200FC6865 /* Photo.swift in Sources */,
 				0E8BF46A1DE74398007C19DC /* APIManager.swift in Sources */,
 				0E8BF43A1DE741A8007C19DC /* ViewController.swift in Sources */,
 				0E8BF4381DE741A8007C19DC /* AppDelegate.swift in Sources */,
@@ -568,6 +572,7 @@
 				0E8BF45E1DE741A9007C19DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E8BF45F1DE741A9007C19DC /* Build configuration list for PBXNativeTarget "showAlbumsTests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +581,7 @@
 				0E8BF4611DE741A9007C19DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E8BF4621DE741A9007C19DC /* Build configuration list for PBXNativeTarget "showAlbumsUITests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +590,7 @@
 				0E8BF4641DE741A9007C19DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,29 +7,52 @@
 //
 
 import UIKit
-
-class AlbumPhotos: UIViewController {
-
+import Photos
+class AlbumPhotos: UICollectionViewController {
+    
+    
+    var imageArray = [UIImage]()
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        grabPhotos()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func grabPhotos() {
+        
+        let imgManager = PHImageManager.defaultManager()
+        let requestOptions = PHImageRequestOptions()
+        requestOptions.synchronous = true
+        requestOptions.deliveryMode = .Opportunistic
+        
+        let fetchOptions = PHFetchOptions()
+        fetchOptions.sortDescriptors = [NSSortDescriptor(key:"createDate", ascending:false)]
+        if let fetchResult: PHFetchResult = PHAsset.fetchAssetsWithMediaType(.Image, options: fetchOptions){
+            if fetchResult.count>0{
+                for i in 0..<fetchResult.count{
+                    imgManager.requestImageForAsset(fetchResult.objectAtIndex(i) as! PHAsset, targetSize: CGSize(width: 150,height: 150), contentMode: .AspectFill, options: requestOptions, resultHandler: {
+                       
+                        image, error in
+                        self.imageArray.append(image!)
+                        
+                    })
+                    
+                }
+            }
+            else
+                {
+                    print("there is no photos")
+                }
+            
+            }
+        
+    }
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.imageArray.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)
+        let imageView = cell.viewWithTag(1)as! UIImageView
+        imageView.image = imageArray[indexPath.row]
+        return cell
     }
-    */
 
 }

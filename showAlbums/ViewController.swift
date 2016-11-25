@@ -11,17 +11,24 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var Table: UITableView!
     var albums = [Album]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
        let api = APIManager()
         api.loadData("https://jsonplaceholder.typicode.com/albums",completion:didloadData)
+        api.loadPhotoData("https://jsonplaceholder.typicode.com/photos",completion:didloadPhotoData)
         // Do any additional setup after loading the view, typically from a nib.
     }
     func didloadData(albums:[Album])
     {
        self.albums = albums
       Table.reloadData()
+    }
+    func didloadPhotoData(photos:[Photo])
+    {
+        myphotos = photos
+        print (myphotos)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +47,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = ("Album \(indexPath.row + 1)")
         cell.detailTextLabel?.text = album.title
         return cell
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "gotoAlbumsdetails" {
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
+            _ = albums[(Table.indexPathForSelectedRow?.row)!]
+            _ = segue.destinationViewController as! AlbumPhotos
+        }
     }
 
 
