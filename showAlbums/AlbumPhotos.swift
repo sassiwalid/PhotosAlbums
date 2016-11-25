@@ -23,7 +23,6 @@ class AlbumPhotos: UICollectionViewController {
         requestOptions.deliveryMode = .Opportunistic
         
         let fetchOptions = PHFetchOptions()
-        fetchOptions.sortDescriptors = [NSSortDescriptor(key:"createDate", ascending:false)]
         if let fetchResult: PHFetchResult = PHAsset.fetchAssetsWithMediaType(.Image, options: fetchOptions){
             if fetchResult.count>0{
                 for i in 0..<fetchResult.count{
