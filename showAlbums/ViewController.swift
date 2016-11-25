@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var albums = [Album]()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()   
 
        let api = APIManager()
         api.loadData("https://jsonplaceholder.typicode.com/albums",completion:didloadData)
